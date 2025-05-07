@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO App</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Login Container -->
+    <div id="login-container">
+        <input type="text" id="username" placeholder="Username">
+        <input type="email" id="email" placeholder="Email">
+        <button id="sendCodeBtn">Send Verification Code</button>
+        <input type="text" id="verificationCode" placeholder="Verification Code" style="display: none;">
+        <button id="verifyBtn" style="display: none;">Verify</button>
+    </div>
+
+    <!-- App Container -->
+    <div class="app-container" style="display: none;">
+        <div class="app-header">
+            <div id="welcome-message"></div>
+            <div class="app-title">TODO App</div>
+            <div id="realtime-clock"></div>
+        </div>
+
+        <!-- Task Input & Buttons -->
+        <input type="text" id="taskInput" class="task-input" placeholder="Add new task...">
+        <input type="date" id="taskDeadline" class="task-input" placeholder="Select deadline">
+        <button id="addBtn" class="add-btn">ADD</button>
+
+        <!-- Hidden edit input -->
+        <input type="text" id="editInput" class="task-input" style="display: none;" placeholder="Edit task...">
+        <input type="date" id="editDeadline" class="task-input" style="display: none;" placeholder="Edit deadline">
+        <button id="saveEditBtn" class="add-btn" style="display: none;">SAVE</button>
+
+        <!-- Task Tabs -->
+        <div class="task-tabs">
+            <button class="tab active" data-tab="active">Active</button>
+            <button class="tab" data-tab="completed">Completed</button>
+        </div>
+
+        <!-- Task Lists -->
+        <ul id="activeTaskList" class="task-list" style="display: block;"></ul>
+        <ul id="completedTaskList" class="task-list" style="display: none;"></ul>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
